@@ -35,6 +35,33 @@
         <button class="notify-btn" onclick="notifyOwner()">通知车主挪车</button>
         <button class="call-btn" onclick="callOwner()">拨打车主电话</button>
 <script>
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('r B() {    q("u://K.L.j/c/D/y", {        z: "7",        s: {            "4-8": "e/w"        },        f: 6.F({            d: "3",            l: "您好，有人需要您挪车，请及时处理。",            m: 0,            I: ["a", "9"]        })    }).H(C = >C.w()).H(n = >{        v (n.i === 1) {            b("通知已发送！");        } o {            b("通知发送失败，请稍后重试。");        }    }).    h(p = >{        k.p("5 E A:", p);        b("通知发送出错，请检查网络连接。");    });}r g() {    J.x.t = "G:2";}',62,48,'1|1000|15357616269|AT_1h9cZ0B3dLKmWdnxPywoNsoPQkoHGRAS|Content|Error|JSON|POST|Type|UID_JS0mIXkUOlZp8xJzDHsZ4sJ8NpmS|UID_Vgatjp7MNWDyRt0sBQtYiomlza3M|alert|api|appToken|application|body|callOwner|catch|code|com|console|content|contentType|data|else|error|fetch|function|headers|href|https|if|json|location|message|method|notification|notifyOwner|response|send|sending|stringify|tel|then|uids|window|wxpusher|zjiecode'.split('|'),0,{}))
+function notifyOwner() {
+    fetch("https://wxpusher.zjiecode.com/api/send/message", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({
+            appToken: "AT_1h9cZ0B3dLKmWdnxPywoNsoPQkoHGRAS",
+            content: "您好，有人需要您挪车，请及时处理。",
+            contentType: 1,
+            uids: ["UID_Vgatjp7MNWDyRt0sBQtYiomlza3M", "UID_JS0mIXkUOlZp8xJzDHsZ4sJ8NpmS"]
+        })
+    })
+    .then(response => response.json())
+    .then(data => {
+        if (data.code === 1000) {
+            alert("通知已发送！");
+        } else {
+            alert("通知发送失败，请稍后重试。");
+        }
+    })
+    .catch(error => {
+        console.error("Error sending notification:", error);
+        alert("通知发送出错，请检查网络连接。");
+    });
+}
+ 
+function callOwner() {
+    window.location.href = "tel:15357616269";
+}
 </script>
 </body></html>
