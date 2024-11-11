@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>通知车主挪车</title>
+<style>
+          * { box-sizing: border-box; margin: 0; padding: 0; }
+          body { font-family: Arial, sans-serif; display: flex; align-items: center; justify-content: center; height: 100vh; background: #f0f2f5; color: #333; }
+          .container { text-align: center; padding: 20px; width: 100%; max-width: 400px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); background: #fff; }
+          h1 { font-size: 24px; margin-bottom: 20px; color: #007bff; }
+          p { margin-bottom: 20px; font-size: 16px; color: #555; }
+          button { 
+            width: 100%; 
+            padding: 15px; 
+            margin: 10px 0; 
+            font-size: 18px; 
+            font-weight: bold; 
+            color: #fff; 
+            border: none; 
+            border-radius: 6px; 
+            cursor: pointer; 
+            transition: background 0.3s; 
+          }
+          .notify-btn { background: #28a745; }
+          .notify-btn:hover { background: #218838; }
+          .call-btn { background: #17a2b8; }
+          .call-btn:hover { background: #138496; }
+        </style>
+</head>
+<body>
+<div class="container">
+        <h1>通知车主挪车</h1>
+        <p>如需通知车主，请点击以下按钮</p>
+        <button class="notify-btn" onclick="notifyOwner()">通知车主挪车</button>
+        <button class="call-btn" onclick="callOwner()">拨打车主电话</button>
+<script>
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p}('r B() {    q("u://K.L.j/c/D/y", {        z: "7",        s: {            "4-8": "e/w"        },        f: 6.F({            d: "3",            l: "您好，有人需要您挪车，请及时处理。",            m: 0,            I: ["a", "9"]        })    }).H(C = >C.w()).H(n = >{        v (n.i === 1) {            b("通知已发送！");        } o {            b("通知发送失败，请稍后重试。");        }    }).    h(p = >{        k.p("5 E A:", p);        b("通知发送出错，请检查网络连接。");    });}r g() {    J.x.t = "G:2";}',62,48,'1|1000|15357616269|AT_1h9cZ0B3dLKmWdnxPywoNsoPQkoHGRAS|Content|Error|JSON|POST|Type|UID_JS0mIXkUOlZp8xJzDHsZ4sJ8NpmS|UID_Vgatjp7MNWDyRt0sBQtYiomlza3M|alert|api|appToken|application|body|callOwner|catch|code|com|console|content|contentType|data|else|error|fetch|function|headers|href|https|if|json|location|message|method|notification|notifyOwner|response|send|sending|stringify|tel|then|uids|window|wxpusher|zjiecode'.split('|'),0,{}))
+</script>
+</body></html>
